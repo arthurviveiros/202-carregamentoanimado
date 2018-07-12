@@ -8,112 +8,49 @@ body{
     align-items: center;
     background-color: darkgrey;
 }
+#animar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
 
 h1{
     font-size: 40pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#animar{
-    display: flex;
-    justify-content: space-between;
-    width: 20vw;
-}
 
-.item{
-    background-color: black;
+
+.preto{
+    background-color: #FF4642;
     height: 40px;
-    width: 8px;
-    animation: esticar 1s linear infinite;
+    width: 300px;
 }
 
-.item:nth-child(1){
-    animation-delay: 0s;
-}
-
-.item:nth-child(2){
-    animation-delay: 0.1s;
-}
-
-.item:nth-child(3){
-    animation-delay: 0.2s;
-}
-
-.item:nth-child(4){
-    animation-delay: 0.3s;
-}
-
-.item:nth-child(5){
-    animation-delay: 0.4s;
-}
-
-.item:nth-child(6){
-    animation-delay: 0.5s;
-}
-
-.item:nth-child(7){
-    animation-delay: 0.6s;
-}
-
-.item:nth-child(8){
-    animation-delay: 0.7s;
-}
-
-.item:nth-child(9){
-    animation-delay: 0.8s;
-}
-
-.item:nth-child(10){
-    animation-delay: 0.9s;
+.vermelho{
+    background-color: red;
+    height: 40px;
+    width: 300px;
+    animation: esticar 5s cubic-bezier(1,.38,.83,.67);
 }
 
 @media (max-width: 600px){
-    #animar{
-        display: block;
-    }
-
-    .item{
-        position: absolute;
-        left: 50%;
-        height: 70px;
-        width: 12px;
-        animation-name: girar;
-        animation-duration: 2s;
-        transform-origin: bottom;
-    }
+.preto{
+    
 }
+.vermelho{
 
-@keyframes girar {
-    0%{
-        transform: rotate(0deg);
-    }
-    30%{
-        background-color: red;
-        transform: rotate(0deg);
-    }
-    70%{
-        background-color: red;
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+}
 }
 
 @keyframes esticar{
     0%{
-        transform: scaleY(1);
-    }
-    70%{
-        background-color: black;
-        transform: scaleY(1);
-    }
-    85%{
-        background-color: red;
-        transform: scaleY(2);
-    }
+        transform: scaleX(0) ;
+        transform-origin: 0;
+        }
     100%{
-        background-color: black;
-        transform: scaleY(1);
+        transform: scaleX(1);
+        transform-origin: 0;
     }
 }
